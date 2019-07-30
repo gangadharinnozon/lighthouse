@@ -31,7 +31,7 @@ RUN npm install -g lighthouse
 #COPY entrypoint.sh to container
 ADD ./lighthouse $INSTALL_DIR/lighthouse
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh && dos2unix /entrypoint.sh && $INSTALL_DIR
+RUN chmod +x /entrypoint.sh && dos2unix /entrypoint.sh && mkdir $INSTALL_DIR
 
 # Workdirectory of application
 WORKDIR $INSTALL_DIR
