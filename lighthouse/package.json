@@ -1,0 +1,13 @@
+{
+  "name": "Performance_Tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start-performance-tests.js",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^8.0.1"
+  }
+}
