@@ -29,9 +29,9 @@ ARG CACHEBUST=1
 RUN npm install -g lighthouse
 
 #COPY entrypoint.sh to container
-ADD ./lighthouse $INSTALL_DIR/lighthouse
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh && dos2unix /entrypoint.sh && mkdir $INSTALL_DIR
+RUN chmod +x /entrypoint.sh && dos2unix /entrypoint.sh && mkdir -p $INSTALL_DIR
+ADD ./lighthouse $INSTALL_DIR/lighthouse
 
 # Workdirectory of application
 WORKDIR $INSTALL_DIR
